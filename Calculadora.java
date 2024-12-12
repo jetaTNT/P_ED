@@ -46,6 +46,12 @@ public Calculadora(int num1,char operador, int num2) {
     private int multiplicar(){
     return num1 * num2;
     }
+    private int dividir(){
+        return num1 / num2;
+    }
+    private int porcentaje(){
+        return (num1 * num2) / 100;
+    }
 
     public void imprimir(){
     switch(operador){
@@ -53,10 +59,15 @@ public Calculadora(int num1,char operador, int num2) {
             System.out.println(num1 + " + " + num2 + " = " + sumar());
             break;
         case '-':
-            System.out.println(num1 + " - " + num2 + " = " + sumar());
+            System.out.println(num1 + " - " + num2 + " = " + restar());
             break;
         case '*':
-            System.out.println(num1 + " * " + num2 + " = " + sumar());
+            System.out.println(num1 + " * " + num2 + " = " + multiplicar());
+            break;
+        case "/":
+            System.out.println(num1 + " / " + num2 + " = " + dividir())
+        case '%':
+            System.out.println(num1 + " % " + num2 + " = " + porcentaje());
             break;
     }
     }
